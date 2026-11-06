@@ -2446,32 +2446,3 @@ if (menuToggle && mainNav) {
 document.getElementById("currentYear").textContent =
     new Date().getFullYear();
 </script>
-
-const shareButton = document.getElementById("sharePage");
-
-if (shareButton) {
-    shareButton.addEventListener("click", async () => {
-        const shareData = {
-            title: document.title,
-            text: "Explore AL-SAYED Building Materials.",
-            url: window.location.href
-        };
-
-        try {
-            if (navigator.share) {
-                await navigator.share(shareData);
-            } else {
-                await navigator.clipboard.writeText(shareData.url);
-                shareButton.textContent = "Link Copied!";
-            }
-        } catch (error) {
-            if (error.name !== "AbortError") {
-                alert("Please copy the page link from your browser.");
-            }
-        }
-    });
-}
-
-
-</body>
-</html>
