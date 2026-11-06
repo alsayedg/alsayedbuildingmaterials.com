@@ -71,6 +71,316 @@ content="https://alsayedbuildingmaterials.com/social-share.jpg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* ==========================================
+   AL-SAYED PREMIUM COLORFUL DESIGN
+   ========================================== */
+
+/* Main page background */
+body {
+    background: #f4f7fb;
+    color: #26384b;
+}
+
+/* STICKY HEADER WITH background.jpg */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(9, 27, 45, .94),
+            rgba(20, 48, 70, .86)
+        ),
+        url("background.jpg") center 45% / cover no-repeat;
+
+    border-bottom: 3px solid #e97825;
+    box-shadow: 0 5px 22px rgba(0,0,0,.16);
+    backdrop-filter: none;
+}
+
+.header-inner {
+    min-height: 76px;
+}
+
+.brand-name {
+    color: #ffffff;
+}
+
+.brand-location {
+    color: #e0e8ef;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #ffad70;
+}
+
+.menu-toggle {
+    background: rgba(255,255,255,.12);
+    color: white;
+    border-color: rgba(255,255,255,.3);
+}
+
+.header-actions .btn-orange {
+    background: #f18432;
+}
+
+/* MOBILE NAVIGATION */
+@media(max-width:850px) {
+    nav {
+        background: #ffffff;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    }
+
+    nav a {
+        color: #14283d;
+    }
+
+    nav a:hover {
+        color: #e97825;
+    }
+}
+
+/* COLORFUL HERO */
+.hero {
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(8,24,42,.93),
+            rgba(12,43,67,.78),
+            rgba(12,43,67,.35)
+        ),
+        url("background.jpg") center 55% / cover no-repeat;
+}
+
+.hero h1 span {
+    color: #ff9b50;
+}
+
+/* ALTERNATING HOMEPAGE BACKGROUNDS */
+
+/* Main materials section */
+#materials {
+    background:
+        linear-gradient(135deg, #ffffff, #edf4fb);
+}
+
+/* About section */
+#about {
+    background:
+        linear-gradient(135deg, #fff7ed, #fcebd9);
+}
+
+/* Why Al-Sayed */
+.dark-band {
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,151,69,.22),
+            transparent 35%
+        ),
+        linear-gradient(125deg, #0b1d30, #204968);
+}
+
+/* Process section */
+#about + .dark-band + .section {
+    background:
+        linear-gradient(135deg, #f1f6fc, #ffffff);
+}
+
+/* Overseas section */
+.overseas {
+    background:
+        linear-gradient(120deg, #fff1df, #fffaf4);
+    border: 1px solid #f3d7b8;
+    border-radius: 14px;
+}
+
+/* Project section */
+#projects {
+    background:
+        linear-gradient(135deg, #ffffff, #edf3fa);
+}
+
+/* Service areas */
+#areas {
+    background:
+        linear-gradient(120deg, #fff4e9, #fdfaf6);
+}
+
+/* Blog section */
+#insights {
+    background:
+        linear-gradient(135deg, #eef5fc, #ffffff);
+}
+
+/* Location */
+.location-grid {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.location-box {
+    background:
+        linear-gradient(145deg, #102a43, #24516e);
+}
+
+/* FAQ */
+.faq-item {
+    background: rgba(255,255,255,.94);
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(20,40,61,.04);
+}
+
+/* INTRO STRIP */
+.intro-strip {
+    background: linear-gradient(90deg, #fff7ed, #ffffff, #edf5fc);
+}
+
+.intro-item strong {
+    color: #173b59;
+}
+
+/* MATERIAL CARDS */
+.material-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 7px 22px rgba(20,40,61,.06);
+    border: 1px solid #e4eaf0;
+}
+
+.material-card:hover {
+    box-shadow: 0 16px 35px rgba(20,40,61,.13);
+}
+
+/* BLOG CARDS */
+.blog-card {
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 6px 20px rgba(20,40,61,.05);
+}
+
+.blog-card:hover {
+    border-color: #f2bd91;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    border-radius: 12px;
+    background:
+        linear-gradient(145deg, #173b59, #0b1d30);
+    box-shadow: 0 10px 25px rgba(20,40,61,.12);
+}
+
+/* PROCESS STEPS */
+.process-step {
+    background: #ffffff;
+    padding: 23px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(20,40,61,.05);
+}
+
+/* SERVICE AREA TAGS */
+.area {
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(20,40,61,.04);
+}
+
+/* FINAL CTA */
+.final-cta {
+    background:
+        linear-gradient(115deg, #e97825, #f59b48);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(233,120,37,.17);
+}
+
+/* ABOUT IMAGE */
+.about-image img {
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(20,40,61,.12);
+}
+
+/* SECTION HEADINGS */
+.section-heading h2,
+.about-copy h2 {
+    color: #14283d;
+}
+
+.eyebrow {
+    color: #e97825;
+}
+
+/* BUTTON IMPROVEMENTS */
+.btn {
+    border-radius: 7px;
+    font-weight: 800;
+}
+
+.btn-orange {
+    background: linear-gradient(135deg, #f18a37, #d96518);
+}
+
+.btn-orange:hover {
+    background: #bd5310;
+}
+
+/* FOOTER */
+footer {
+    background:
+        linear-gradient(135deg, #091827, #142f48);
+    border-top: 4px solid #e97825;
+}
+
+/* MOBILE IMPROVEMENTS */
+@media(max-width:600px) {
+
+    .hero {
+        min-height: 450px;
+        background-position: 60% center;
+    }
+
+    .header-inner {
+        min-height: 62px;
+    }
+
+    .brand-name {
+        font-size: 10px;
+    }
+
+    .brand-location {
+        font-size: 8px;
+    }
+
+    .section {
+        padding: 58px 0;
+    }
+
+    .material-card,
+    .blog-card {
+        border-radius: 10px;
+    }
+
+    .final-cta {
+        border-radius: 10px;
+    }
+
+    .intro-strip {
+        background: #fff7ed;
+    }
+}
+
 :root {
     --navy: #14283d;
     --navy-dark: #0c1b2b;
