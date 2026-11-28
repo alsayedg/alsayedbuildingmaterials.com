@@ -92,8 +92,7 @@
     .hero .eyebrow{color:#D9B38D}
     .hero h1{font-family:Manrope,sans-serif;font-size:clamp(2.7rem,6.3vw,5.15rem);line-height:1.04;letter-spacing:-.055em;font-weight:800;margin-bottom:22px}
     .hero h1 span{display:block;color:#D6B18B}
-    .hero-copy{max-width:610px;color:#E6E8E1;font-size:1.02rem;margin-bottom:30px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-copy{max-width:610px;color:#E6E8E1;font-size:1.02rem;margin-bottom:6px}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:12px 21px;font-size:.8rem;font-weight:700;transition:transform .2s,background .2s,border-color .2s}
     .btn:hover{transform:translateY(-2px)}
     .btn-bronze{background:var(--bronze);color:#fff}
@@ -229,8 +228,6 @@
       .hero-content{padding:70px 0}
       .hero h1{font-size:clamp(2.45rem,11vw,3.55rem)}
       .hero-copy{font-size:.88rem}
-      .hero-actions{flex-direction:column}
-      .hero-actions .btn{width:100%}
       .hero-note{gap:18px;margin-top:27px}
       .hero-note strong{font-size:1.2rem}
       .hero-note span{font-size:.64rem}
@@ -255,7 +252,7 @@
       html{scroll-behavior:auto}
       *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
     }
-  
+
     /* Premium mobile refinement */
     :root { --tap: 48px; }
     .material-card { display:block; color:inherit; min-width:0; border-radius:14px; overflow:hidden; }
@@ -264,8 +261,6 @@
     }
     .material-photo img { transition:transform .45s ease; }
     .btn, .header-cta, .theme-toggle, .menu-toggle, .share-button { min-height:var(--tap); }
-    .btn-share-hero { border:1px solid rgba(255,255,255,.55); color:#fff; background:rgba(255,255,255,.10); cursor:pointer; }
-    .btn-share-hero:hover { background:rgba(255,255,255,.18); }
     .footer-share { margin-top:24px; }
     .share-button { border:1px solid rgba(255,255,255,.35); color:#F7F5EF; background:transparent; padding:11px 17px; font-weight:700; cursor:pointer; }
     .share-button:hover { border-color:#D6B18B; color:#D6B18B; }
@@ -329,10 +324,7 @@
       .hero-content { padding:66px 0 72px; }
       .hero .eyebrow { font-size:.63rem; letter-spacing:.14em; }
       .hero h1 { font-size:clamp(2.25rem,10.5vw,3.35rem); line-height:1.06; margin-bottom:17px; }
-      .hero-copy { font-size:.88rem; line-height:1.65; margin-bottom:23px; }
-      .hero-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-      .hero-actions .btn { width:100%; min-height:48px; padding:11px 10px; font-size:.73rem; text-align:center; }
-      .hero-actions .btn:first-child { grid-column:1/-1; }
+      .hero-copy { font-size:.88rem; line-height:1.65; margin-bottom:6px; }
       .hero-note { gap:14px; justify-content:space-between; margin-top:25px; padding-top:17px; }
       .hero-note strong { font-size:1.12rem; }
       .hero-note span { font-size:.61rem; }
@@ -375,8 +367,6 @@
       .brand-location { font-size:.47rem; }
       .materials-grid { grid-template-columns:1fr; }
       .material-photo { height:190px; }
-      .hero-actions { grid-template-columns:1fr; }
-      .hero-actions .btn:first-child { grid-column:auto; }
       .trust-grid { grid-template-columns:1fr; }
       .trust-item { border-right:0; border-bottom:1px solid #D8D1C4; }
       .trust-item:last-child { border-bottom:0; }
@@ -384,7 +374,6 @@
     @media (prefers-reduced-motion:reduce) {
       .material-photo img { transition:none; }
     }
-
   </style>
 
   <script type="application/ld+json">
@@ -457,12 +446,6 @@
           <div class="eyebrow">Building materials · Islamabad &amp; Rawalpindi</div>
           <h1>Building Strong Foundations.<span>Supplying Better Materials.</span></h1>
           <p class="hero-copy">Your local building material supply partner for bricks, cement, construction sand and stone crush. Discuss your material requirements, quantities and delivery location with Al-Sayed Building Materials.</p>
-          <div class="hero-actions">
-            <a class="btn btn-bronze" href="#materials">Explore Materials <span aria-hidden="true">→</span></a>
-            <a class="btn btn-light" href="#quote">Get a Quote</a>
-            <a class="btn btn-outline-light" href="tel:+923109871812">Call +92 310 9871812</a>
-            <button class="btn btn-share-hero" type="button" data-share-page>↗ Share Website</button>
-          </div>
           <div class="hero-note" aria-label="Business information">
             <div><strong>23+</strong><span>Years of experience</span></div>
             <div><strong>04</strong><span>Material categories</span></div>
@@ -671,7 +654,7 @@
     <div class="container">
       <div class="footer-grid">
         <div><div class="footer-brand">AL-SAYED BUILDING MATERIALS</div><p>Building material supplier serving Islamabad, Rawalpindi and surrounding areas.</p><p>Bricks, cement, construction sand and stone crush for residential and commercial construction requirements.</p><p>K-Block, Gulberg Greens, Islamabad, Pakistan</p><p><a href="tel:+923109871812">+92 310 9871812</a></p></div>
-        <div><h3>Our Materials</h3><ul><li><a href="href="/bricks.html">Bricks</a></li><li><a href="cement.html">Cement</a></li><li><a href="sand.html">Construction Sand</a></li><li><a href="crush.html">Stone Crush</a></li><li><a href="generalsupply.html">General Supply</a></li></ul></div>
+        <div><h3>Our Materials</h3><ul><li><a href="/bricks.html">Bricks</a></li><li><a href="cement.html">Cement</a></li><li><a href="sand.html">Construction Sand</a></li><li><a href="crush.html">Stone Crush</a></li><li><a href="generalsupply.html">General Supply</a></li></ul></div>
         <div><h3>Explore Al-Sayed</h3><ul><li><a href="/">Home</a></li><li><a href="#about">About Us</a></li><li><a href="ourprojects.html">Projects</a></li><li><a href="blog/">Building Materials Blog</a></li><li><a href="contactus.html">Contact Us</a></li><li><a href="#quote">Request a Quote</a></li></ul></div>
       </div>
       <div class="footer-share"><button class="share-button" type="button" data-share-page>↗ Share Al-Sayed Website</button></div>
@@ -752,7 +735,6 @@
         }
       });
     });
-
 
     document.getElementById("quoteForm").addEventListener("submit", event => {
       event.preventDefault();
