@@ -268,6 +268,71 @@
       .trust-item{border-right:0;border-bottom:1px solid var(--line)}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  /* PREMIUM BRICK PHOTO GALLERY */
+.brick-gallery {
+    padding: 65px 5%;
+    background: #F5F2EB;
+}
+
+.brick-gallery-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.brick-gallery-header h2 {
+    color: #202823;
+    font-size: clamp(26px, 4vw, 38px);
+    margin-bottom: 10px;
+}
+
+.brick-gallery-header p {
+    color: #59664F;
+    font-size: 15px;
+}
+
+.brick-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.brick-gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: transform .3s ease;
+}
+
+.brick-gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.brick-gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .brick-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .brick-gallery-item img {
+        height: 165px;
+    }
+}
+
+@media (max-width: 380px) {
+    .brick-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
   </style>
 
   <script type="application/ld+json">
@@ -468,6 +533,105 @@
         </div>
       </div>
     </section>
+    <section class="brick-gallery" id="brick-gallery">
+
+    <div class="brick-gallery-header">
+        <h2>Our Brick Photo Gallery</h2>
+        <p>Explore our brick collection at AL-SAYED Building Materials</p>
+    </div>
+
+    <div class="brick-gallery-grid">
+
+        <a class="brick-gallery-item" href="brick00.jpg.jpeg" target="_blank">
+            <img src="brick00.jpg.jpeg" alt="Building bricks Islamabad" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick001.jpg.jpeg" target="_blank">
+            <img src="brick001.jpg.jpeg" alt="Construction bricks collection" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick002.jpg.jpeg" target="_blank">
+            <img src="brick002.jpg.jpeg" alt="Quality building bricks" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick01.jpg.jpeg" target="_blank">
+            <img src="brick01.jpg.jpeg" alt="Brick supplier Islamabad" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick02.jpg.jpeg" target="_blank">
+            <img src="brick02.jpg.jpeg" alt="Red construction bricks" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick03.jpg.jpeg" target="_blank">
+            <img src="brick03.jpg.jpeg" alt="Building material bricks" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick04.jpg.jpeg" target="_blank">
+            <img src="brick04.jpg.jpeg" alt="Clay bricks collection" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick05.jpg.jpeg" target="_blank">
+            <img src="brick05.jpg.jpeg" alt="Bricks for construction" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick06.jpg.jpeg" target="_blank">
+            <img src="brick06.jpg.jpeg" alt="Construction brick supply" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick07.jpg.jpeg" target="_blank">
+            <img src="brick07.jpg.jpeg" alt="Quality clay bricks" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick08.jpg.jpeg" target="_blank">
+            <img src="brick08.jpg.jpeg" alt="Brick collection Pakistan" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brick09.jpg.jpeg" target="_blank">
+            <img src="brick09.jpg.jpeg" alt="Building bricks supplier" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brickback.jpg" target="_blank">
+            <img src="brickback.jpg" alt="Brick background photograph" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="brickback.webp" target="_blank">
+            <img src="brickback.webp" alt="Brick collection photograph" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks1.jpg" target="_blank">
+            <img src="bricks1.jpg" alt="Bricks for building projects" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks17.jpg" target="_blank">
+            <img src="bricks17.jpg" alt="Construction brick stock" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks3.jpg" target="_blank">
+            <img src="bricks3.jpg" alt="Brick supplier Rawalpindi" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks4.jpg" target="_blank">
+            <img src="bricks4.jpg" alt="Building bricks stock" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks5.jpg" target="_blank">
+            <img src="bricks5.jpg" alt="Construction bricks Pakistan" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks6.jpg" target="_blank">
+            <img src="bricks6.jpg" alt="Quality bricks for houses" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks7.jpg" target="_blank">
+            <img src="bricks7.jpg" alt="Brick material collection" loading="lazy">
+        </a>
+
+        <a class="brick-gallery-item" href="bricks8.jpg" target="_blank">
+            <img src="bricks8.jpg" alt="AL-SAYED brick supply" loading="lazy">
+        </a>
+
+    </div>
+</section>
 
     <section class="section section-beige">
       <div class="container">
