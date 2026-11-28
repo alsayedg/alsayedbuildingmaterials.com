@@ -75,7 +75,7 @@
     .hero .eyebrow{color:#D9B38D}
     .hero h1{font-family:Manrope,sans-serif;font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.05;letter-spacing:-.055em;font-weight:800;margin-bottom:22px}
     .hero h1 span{display:block;color:#D6B18B}
-    .hero-copy{max-width:610px;color:#E6E8E1;font-size:1.02rem;margin-bottom:30px}
+    .hero-copy{max-width:610px;color:#E6E8E1;font-size:1.02rem;margin-bottom:6px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--tap);padding:12px 21px;font-size:.8rem;font-weight:700;border:0;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
     .btn:hover{transform:translateY(-2px)}
@@ -154,6 +154,25 @@
     .field textarea{min-height:105px;resize:vertical}
     .field input::placeholder,.field textarea::placeholder{color:var(--muted)}
     .form-help{font-size:.7rem;color:var(--muted);margin-top:10px}
+
+    /* Share your experience */
+    .exp-section{background:var(--ink);color:#F7F5EF}
+    .exp-copy h2{font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;color:#fff;margin-bottom:15px}
+    .exp-copy p{color:#C8CEC4;font-size:.95rem}
+    .exp-points{list-style:none;margin-top:22px}
+    .exp-points li{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:.86rem;color:#E6E8E1}
+    .exp-points li::before{content:"✓";flex:none;width:24px;height:24px;display:grid;place-items:center;background:rgba(214,177,139,.18);color:#D6B18B;font-weight:800;font-size:.8rem}
+    .rate{border:0;margin-bottom:18px}
+    .rate legend{font-size:.8rem;font-weight:700;color:var(--head);margin-bottom:6px}
+    .stars{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px}
+    .stars input{position:absolute;opacity:0;width:1px;height:1px}
+    .stars label{width:50px;height:50px;display:grid;place-items:center;font-size:2.3rem;line-height:1;color:#CBC5B7;cursor:pointer;transition:color .15s,transform .15s}
+    html.dark-mode .stars label{color:#4A574D}
+    .stars input:checked~label,.stars label:hover,.stars label:hover~label{color:#D9A441}
+    .stars label:active{transform:scale(1.15)}
+    .stars input:focus-visible+label{outline:3px solid #C69A70;outline-offset:2px}
+    .rate-text{min-height:1.5em;margin-top:4px;font-size:.82rem;font-weight:700;color:var(--bronze)}
+    .rate-text.warn{color:#C0392B}
 
     /* Footer */
     .site-footer{background:#19211C;color:#CBD1C8;padding:60px 0 22px}
@@ -315,11 +334,6 @@
           <div class="eyebrow">Bricks · Islamabad &amp; Rawalpindi</div>
           <h1>Bricks Supplier<span>in Islamabad &amp; Rawalpindi.</span></h1>
           <p class="hero-copy">Construction bricks for houses, boundary walls, commercial and masonry projects. Ask for current prices, availability and delivery from Al-Sayed Building Materials.</p>
-          <div class="hero-actions">
-            <a class="btn btn-bronze" href="#brick-types">Explore Brick Types <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-light" href="#quote">Get a Quote</a>
-            <a class="btn btn-outline-light" href="tel:+923109871812">Call Now</a>
-          </div>
           <div class="hero-note" aria-label="Business information">
             <div><strong>23+</strong><span>Years of experience</span></div>
             <div><strong>09</strong><span>Brick options</span></div>
@@ -407,6 +421,36 @@
           <article class="process-step"><div class="process-number">02</div><h3>Get the current price</h3><p>We share the latest rate for your type and quantity.</p></article>
           <article class="process-step"><div class="process-number">03</div><h3>Arrange delivery</h3><p>We coordinate delivery to match your order and location.</p></article>
         </div>
+      </div>
+    </section>
+
+    <section class="section exp-section" id="experience">
+      <div class="container quote-layout">
+        <div class="exp-copy">
+          <div class="eyebrow">Customer experience</div>
+          <h2>How Was Your Brick Order?</h2>
+          <p>Bought bricks from us before? Tell us how it went. Your honest feedback helps us improve and helps other builders know what to expect.</p>
+          <ul class="exp-points"><li>Takes under a minute</li><li>Opens in WhatsApp and is sent only when you press send</li><li>No sign-up needed</li></ul>
+        </div>
+        <form class="quote-panel" id="expForm" novalidate>
+          <fieldset class="rate">
+            <legend>Tap to rate your experience *</legend>
+            <div class="stars">
+              <input type="radio" name="rating" id="star5" value="5"><label for="star5" title="5 stars - Excellent" aria-label="5 stars">★</label>
+              <input type="radio" name="rating" id="star4" value="4"><label for="star4" title="4 stars - Very good" aria-label="4 stars">★</label>
+              <input type="radio" name="rating" id="star3" value="3"><label for="star3" title="3 stars - Good" aria-label="3 stars">★</label>
+              <input type="radio" name="rating" id="star2" value="2"><label for="star2" title="2 stars - Fair" aria-label="2 stars">★</label>
+              <input type="radio" name="rating" id="star1" value="1"><label for="star1" title="1 star - Poor" aria-label="1 star">★</label>
+            </div>
+            <p class="rate-text" id="ratingText" aria-live="polite"></p>
+          </fieldset>
+          <div class="form-grid">
+            <div class="field field-full"><label for="expBrick">Which bricks did you buy?</label><select id="expBrick" name="brick"><option value="">Select brick type (optional)</option><option>4G Bricks</option><option>5G Bricks</option><option>Standard Bricks</option><option>33 Bricks</option><option>Kiln-Fired Bricks</option><option>PRI Bricks</option><option>Decorative Bricks</option><option>Patterned Bricks</option></select></div>
+            <div class="field field-full"><label for="expDetails">Your experience</label><textarea id="expDetails" name="details" placeholder="Tell us how the order went (optional)"></textarea></div>
+            <div class="field field-full"><label for="expName">Your name (optional)</label><input id="expName" name="name" autocomplete="name" placeholder="Enter your name"></div>
+            <div class="field field-full"><button class="btn btn-bronze" type="submit">Send My Experience on WhatsApp →</button><p class="form-help">Your message opens in WhatsApp. No information is submitted to this website.</p></div>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -539,6 +583,28 @@
         else if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url);const o=b.textContent;b.textContent="✓ Link copied";setTimeout(()=>b.textContent=o,2200)}
         else{window.prompt("Copy this page link:",url)}
       }catch(err){if(err&&err.name!=="AbortError")window.prompt("Copy this page link:",url)}
+    });
+
+    const ratingText=document.getElementById("ratingText"),expDetails=document.getElementById("expDetails"),
+          ratingWords={5:"Excellent",4:"Very good",3:"Good",2:"Fair",1:"Poor"};
+    document.querySelectorAll('input[name="rating"]').forEach(r=>r.addEventListener("change",()=>{
+      const v=+r.value;
+      ratingText.classList.remove("warn");
+      ratingText.textContent=v+"/5 - "+ratingWords[v];
+      expDetails.placeholder=v>=4?"What did you like most? (optional)":"What could we do better? (optional)";
+    }));
+    document.getElementById("expForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      const d=new FormData(e.currentTarget),rating=d.get("rating");
+      if(!rating){ratingText.textContent="Please tap a star rating first";ratingText.classList.add("warn");return}
+      const msg=[
+        "Hello Al-Sayed Building Materials, I would like to share my experience.",
+        `Rating: ${rating}/5 (${ratingWords[rating]})`,
+        `Bricks bought: ${d.get("brick")||"Not specified"}`,
+        `Experience: ${d.get("details")||"No comment"}`,
+        `Name: ${d.get("name")||"Not shared"}`
+      ].join("\n");
+      window.open("https://wa.me/923109871812?text="+encodeURIComponent(msg),"_blank","noopener");
     });
 
     document.getElementById("quoteForm").addEventListener("submit",e=>{
